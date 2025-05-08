@@ -53,10 +53,12 @@ location            = "East US"
 az login
 ```
 
-```bash
-az account set --subscription "<sub id>"
-```
+2.  Export Subscription ID as an Environment Variable
+This sets your subscription ID for Terraform use.
 
+```bash
+export subscription_id="<sub id>"
+```
 3.  Initialize Terraform
 4.  
 ```bash
