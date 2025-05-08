@@ -1,9 +1,9 @@
 # Terraform-azure-pocs
 
 
+## Resource Group creation
 
-
-##  main.tf
+###  main.tf
 
 ```bash
 resource "azurerm_resource_group" "rg" {
@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 ```
 
-## provider.tf
+### provider.tf
 ```bash
 provider "azurerm" {
   features {}
@@ -20,7 +20,7 @@ provider "azurerm" {
   use_cli         = true
 }
 ```
-## variables.tf
+### variables.tf
 ```bash
 variable "resource_group_name" {
   description = "Name of the Azure Resource Group"
@@ -37,15 +37,15 @@ variable "subscription_id" {
   type        = string
 }
 ```
-## terraform.tfvars
+### terraform.tfvars
 
 ```bash
 resource_group_name = "my-resource-group"
 location            = "East US"
 ```
-### Note: We intentionally do not provide subscription_id here. It'll be passed via the shell.
+#### Note: We intentionally do not provide subscription_id here. It'll be passed via the shell.
 
-## Steps to Deploy
+### Steps to Deploy
 
 1.  Authenticate with Azure CLI
 
